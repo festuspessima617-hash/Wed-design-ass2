@@ -1,0 +1,311 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  color: #222;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-box {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #000;
+  position: relative;
+}
+
+.logo-box::before,
+.logo-box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  top: 50%;
+  left: 0;
+}
+
+.logo-box::before {
+  transform: rotate(45deg);
+}
+
+.logo-box::after {
+  transform: rotate(-45deg);
+}
+
+.logo-text h2 {
+  font-size: 20px;
+}
+
+.logo-text p {
+  font-size: 13px;
+  color: #555;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #c62828;
+}
+
+.donate-btn {
+  padding: 10px 20px;
+  border: 2px solid #c62828;
+  color: #c62828;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.hero {
+  background: white;
+  margin-top: 20px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+.hero-image {
+  width: 100%;
+  height: 300px;
+  border: 2px solid #ccc;
+  position: relative;
+}
+
+.hero-image::before,
+.hero-image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #bbb;
+  top: 50%;
+  left: 0;
+}
+
+.hero-image::before {
+  transform: rotate(35deg);
+}
+
+.hero-image::after {
+  transform: rotate(-35deg);
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.primary-btn {
+  background: #c62828;
+  color: white;
+}
+
+.secondary-btn {
+  border: 2px solid #c62828;
+  color: #c62828;
+}
+
+.services {
+  background: white;
+  margin-top: 20px;
+  padding: 40px;
+  border: 1px solid #ddd;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  border: 1px solid #ddd;
+  padding: 25px 20px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.help-bar {
+  background: white;
+  margin-top: 20px;
+  padding: 25px 40px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.help-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.shield {
+  width: 40px;
+  height: 50px;
+  border: 2px solid #999;
+  clip-path: polygon(50% 0%, 100% 20%, 100% 70%, 50% 100%, 0% 70%, 0% 20%);
+}
+
+.hotline {
+  font-size: 24px;
+  font-weight: bold;
+  color: #c62828;
+}
+
+footer {
+  background: white;
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding: 50px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+}
+
+.footer-column a,
+.footer-column p {
+  display: block;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+  color: #777;
+}
+
+@media(max-width: 1024px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .service-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+
